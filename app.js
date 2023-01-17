@@ -13,6 +13,11 @@ function pageTransitions() {
             this.className += ' active-btn'
         })
     }
+
+    // sections active class
+    allSections.addEventListener('click', (e) => {
+        console.log(e.target);
+    })
 }
 // 'this' keyword doesn't exist in arrow functions, which is why there was an error in the arrow function; it was then changed for a usual function
 pageTransitions()
