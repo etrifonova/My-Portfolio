@@ -16,7 +16,22 @@ function pageTransitions() {
 
     // sections active class
     allSections.addEventListener('click', (e) => {
-        console.log(e.target);
+        const id = e.target.dataset.id;
+        if(id) {
+            // remove selected from the other buttons;
+            sectBtns.forEach((btn) => {
+                btn.classList.remove('active')
+            })
+            e.target.classList.add('active')
+
+            // hide other sections
+            sections.forEach((section) => {
+                section.classList.remove('active')
+            })
+
+            const element = document.getElementById(id);
+            element.classList.add('active');
+        }
     })
 }
 // 'this' keyword doesn't exist in arrow functions, which is why there was an error in the arrow function; it was then changed for a usual function
