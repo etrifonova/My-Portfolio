@@ -34,5 +34,18 @@ function pageTransitions() {
         }
     })
 }
-// 'this' keyword doesn't exist in arrow functions, which is why there was an error in the arrow function; it was then changed for a usual function
-pageTransitions()
+
+// Toggle theme
+const themeBtn = document.querySelector('.theme-btn');
+themeBtn.addEventListener('click', () => {
+    let element = document.body;
+    element.classList.toggle('light-mode');
+})
+
+
+
+pageTransitions();
+
+
+
+
